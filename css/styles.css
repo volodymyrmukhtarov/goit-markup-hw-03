@@ -1,31 +1,107 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 body {
-    color: var(--primary-text-color);
-  
-    font-family: 'Roboto', sans-serif;
-    font-weight: var(--bold-font-weight);
-    letter-spacing: var(--letter-spacing);
+  color: var(--primary-text-color);
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: var(--bold-font-weight);
+  letter-spacing: var(--letter-spacing);
+}
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0px;
   }
-  
+
   ul {
     list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  link {
+    text-decoration: none;
+  }
+  img {
+    display: block;
+    min-width: 100px;
   }
   a {
       text-decoration: none;
     }
-    
     button {
       font-family: inherit;
     }
+    /* ПЕРЕМЕННЫЕ по цветам гдето скопировал
+    но пока не подключил так как начал 
+    выполнять дз2 безних... */
+:root {
+  --text-font: 'Roboto', sans-serif;
+  --text-main-color: #757575;
+  --text-head-color: #212121;
+  --accent-color: #2196f3;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --contacts-color: rgba(255, 255, 255, 0.6);
+  --background-main: #2f303a;
+  --background-team: #f5f4fa;
+  --border-work-examples: #eeeeee;
+  --portfolio-border: #ececec;
+}
+
+body {
+  font-family: var(--text-font);
+  color: var(--text-main-color);
+}
+
+    /*======= HEADER ======*/
+.container {
+  width: 1240px; ;
+  margin: 0 auto;
+}
+.container-nav {
+  display: flex;
+  align-items: center;
+  
+}    
+.nav {
+  display: flex;
+  margin-left: 93px;
+ 
+}
+.nav .item:not(:last-child) {
+  margin-right:50px;
+}
+.cont-link{
+  display: flex;
+  margin-left: auto;
+  margin-right: 215px;
+  
+}
+.cont-link .item-cont:not(:first-child) {
+  margin-left: 50px;
+}
+
+
 .logo {
-  font-family: Raleway;
+font-family: Raleway;
 font-style: normal;
 font-weight: bold;
 font-size: 26px;
 line-height: 1.2;
 /* identical to box height */
-
 letter-spacing: 0.03em;
-
 color: #000000;
 }
 .logo-web {
@@ -33,8 +109,12 @@ color: #000000;
 color: #2196F3;
 
 }
-.nav-links {
-  font-family: Roboto;
+.nav .nav-links {
+  display: block;
+  padding-top: 32px ;
+  padding-bottom:32px ;
+
+font-family: Roboto;
 font-style: normal;
 font-weight: 500;
 font-size: 14px;
@@ -47,7 +127,11 @@ color: #212121;
   color:#2196F3;
 }
 .contacts-link {
-  font-family: Roboto;
+  display: block;
+  padding-top: 32px ;
+  padding-bottom:32px ;
+
+font-family: Roboto;
 font-style: normal;
 font-weight: 500;
 font-size: 14px;
@@ -60,76 +144,147 @@ color: #757575;
 .contacts-link:focus { 
 color: #2196F3;
 }
-.hero-title
-{
+
+/* ====== HERO ======= */
+
+.hero-section {
+  background-color: #2F303A ;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+}
+
+.hero-container{
+  max-width: 695px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hero-title{
 font-weight: 900;
 font-size: 44px;
 line-height: 1.36;
-text-align: center;
 letter-spacing: 0.06em;
 text-transform: uppercase;
-
-color:/* wite #FFFFFF */; 
+color: #FFFFFF; 
+margin-bottom: 30px;
 }
 .hero-button {
-  font-weight: bold;
+min-width: 170px;
+padding: 10px 15px;
+
+font-weight: bold;
 font-size: 16px;
 line-height: 1.875;
-/* identical to box height, or 187% */
-
-display: flex;
+border-radius: 4px;
+border: 0px;
+background-color: #2196F3;
 align-items: center;
 text-align: center;
 letter-spacing: 0.06em;
-
 color: #FFFFFF;
 }
 
-/*  Whot we do */
-.imeges-list-title {
+/* ======== Details ========*/
+
+.details-section{
+padding-top: 95px ;
+padding-bottom: 95px ;
+}
+
+.details{
+  display: flex;
+}
+
+.details-list:not(:last-child) {
+  margin-right: 30px;
+}
+
+.details-list{
+  width:270px ;
+}
+
+.details-list-titles {
+margin-bottom: 10px;
+
+font-weight: bold;
+font-size: 14px;
+line-height: 1.143;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: #212121;
+}
+
+.description{
+font-weight: 400;
+font-size: 14px;
+line-height: 1.71
+}
+
+/* ===== Whot we do===== */
+
+.whotwedo-section{
+  padding-bottom: 95px;
+  margin: 0px 89.500px;
+}
+.imeges-title {
 font-weight: bold;
 font-size: 36px;
 line-height: 1.66;
 text-align: center;
 letter-spacing: 0.03em;
-
 color: #212121;
+margin-bottom: 50px;
+}
+
+.imeges-list{
+  display: flex;
+}
+
+.imeges-list :not(:last-child){
+  margin-right: 30px;
 }
 
 /* -- Team -- */
-.name {
-  font-weight: 500;
-font-size: 16px;
-line-height: 1.187;
-/* identical to box height */
+
+.our-team {
+  padding: 95px;
+  background-color: #F5F4FA;
+}
+.our-team-title {
+font-weight: bold;
+font-size: 36px;
+line-height: 1.66;
 text-align: center;
 letter-spacing: 0.03em;
+color: #212121;
+margin-bottom: 50px;
+}
+    
+.our-team-list{
+  display: flex;
+}
+.our-team-list>li:not(:last-child){
+  margin-right: 30px;
+}
 
+.name {
+font-weight: 500;
+font-size: 16px;
+line-height: 1.187;
+text-align: center;
+letter-spacing: 0.03em;
 color: #212121;
 }
 .name-position {
-  font-size: 16px;
+font-size: 16px;
 line-height: 1.187px;
-/* identical to box height */
-
 text-align: center;
 letter-spacing: 0.03em;
-
 color: #757575;
 }
-/*  --Footer--  */
-.address a {
-  font-size: 14px;
-line-height: 24px;
-/* or 171% */
 
-letter-spacing: 0.03em;
 
-color: rgba(255, 255, 255, 0.6);
-}
-.address-color {
-  color: #FFFFFF;
-}
 .portfolio-buttons > li {
   font-weight: 500;
 font-size: 16px;
@@ -162,3 +317,25 @@ letter-spacing: 0.03em;
 color: #757575;
 
 }
+
+/*  --Footer--  */
+
+.footer {
+  background-color:  #2F303A;
+}
+.address a {
+  font-size: 14px;
+line-height: 24px;
+/* or 171% */
+
+letter-spacing: 0.03em;
+
+color: rgba(255, 255, 255, 0.6);
+}
+.address-color {
+  color: #FFFFFF;
+}
+
+
+ /*======PORTFOLIO========*/
+
