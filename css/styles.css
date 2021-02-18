@@ -1,9 +1,19 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 body {
-  color: var(--primary-text-color);
-
   font-family: "Roboto", sans-serif;
   font-weight: var(--bold-font-weight);
   letter-spacing: var(--letter-spacing);
+  color: var(--primary-text-color);
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: 0.03em;
 }
 
 h1,
@@ -35,9 +45,7 @@ a {
 button {
   font-family: inherit;
 }
-/* ПЕРЕМЕННЫЕ по цветам гдето скопировал
-    но пока не подключил так как начал 
-    выполнять дз2 без них... */
+
 :root {
   --text-font: "Roboto", sans-serif;
   --text-main-color: #757575;
@@ -59,6 +67,9 @@ button {
 body {
   font-family: var(--text-font);
   color: var(--text-main-color);
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: 0.03em;
 }
 
 /*======= HEADER ======*/
@@ -68,6 +79,9 @@ body {
 .header .container {
   display: flex;
   align-items: center;
+}
+.portfolio-header {
+  margin-bottom: 93px;
 }
 .container-nav {
   display: flex;
@@ -94,11 +108,10 @@ body {
 .logo {
   margin-right: 93px;
   font-family: Raleway;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  letter-spacing: 0.03em;
-  color: #000000;
+  color: var(--black-color);
 }
 
 .logo-web {
@@ -112,17 +125,15 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  font-family: Roboto;
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.42;
   letter-spacing: 0.02em;
-  color: #212121;
+  color: var(--text-head-color);
 }
 .nav-links:focus,
 .nav-links:hover {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 .nav-links.current:visited {
   color: var(--accent-color);
@@ -132,24 +143,22 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  font-family: Roboto;
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  color: #757575;
+  color: var(--text-main-color);
 }
 .contacts-link:hover,
 .contacts-link:focus {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 /* ====== HERO ======= */
 
 .hero-section {
-  background-color: #2f303a;
+  background-color: var(--background-main);
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -338,30 +347,58 @@ body {
 }
 
 /*======PORTFOLIO========*/
+.portfolio-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.button {
+  padding: 6px 22px;
+  margin-left: 8px;
+  text-align: center;
+  border: 0px;
+  border-radius: 4px;
 
-/* .portfolio-buttons > li */
-/* .button{
-font-weight: 500;
-font-size: 16px;
-line-height: 1.625;
-text-align:;
-letter-spacing: 0.03em;
+  font-weight: 500;
+  line-height: 1.62;
+  color: var(--text-head-color);
+  background-color: var(--background-team);
+  cursor: pointer;
+}
+.button:hover,
+.button:focus {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
 
-color: #212121;
-} */
-
+.portfolio-card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 94px;
+}
+.project-card-link {
+  display: block;
+}
+.project {
+  width: 370px;
+  border: 1px solid var(--border-work-examples);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.project:nth-child(3n) {
+  margin-right: 0px;
+}
 .portfolio-image-title {
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 
-  color: #212121;
+  color: var(--text-head-color);
 }
 .image-description {
-  font-size: 16px;
   line-height: 1.87;
-  letter-spacing: 0.03em;
 
-  color: #757575;
+  color: var(--text-main-color);
 }
