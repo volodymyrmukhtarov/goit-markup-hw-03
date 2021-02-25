@@ -237,7 +237,6 @@ body {
 
 .whotwedo-section {
   padding-bottom: 95px;
-  margin: 0px 89.5px;
 }
 .imeges-title {
   font-weight: bold;
@@ -260,7 +259,7 @@ body {
 /* -- Team -- */
 
 .our-team {
-  padding: 95px;
+  padding: 95px 0px;
   background-color: #f5f4fa;
 }
 .our-team-title {
@@ -401,4 +400,7 @@ body {
   line-height: 1.87;
 
   color: var(--text-main-color);
+}
+.portfolio-card-container {
+  padding: 20px 24px;
 }
